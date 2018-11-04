@@ -7,6 +7,8 @@
  Enter the Computer name or ip address of the machine
  .EXAMPLE
  Get-MacAddress BAY-Computer
+ .EXAMPLE
+ Get-MacAddress BAY-Computer, Server-R2
 #>
 function Get-MacAddress ($computername = 'localhost')
 {
