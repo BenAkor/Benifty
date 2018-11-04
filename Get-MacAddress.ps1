@@ -8,7 +8,8 @@
  .EXAMPLE
  Get-MacAddress BAY-Computer
 #>
-function Get-MacAddress ([string[]] $computername = 'localhost') {
-    Get-WMIObject win32_NetworkAdapter | Select-Object Name, MacAddress, @{l='Max Speed (Mb) '; e={$_.Speed / 1Mb -as [int]}}
+function Get-MacAddress ($computername = 'localhost')
+{
+   Get-WMIObject win32_NetworkAdapter | Select-Object Name, MacAddress, @{l='Max Speed (Mb) '; e={$_.Speed / 1Mb -as [int]}}
 }
 
